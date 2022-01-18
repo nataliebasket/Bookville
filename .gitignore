@@ -1,0 +1,4 @@
+node_modules/
+build/
+Thumbs.db
+.DS_Store
