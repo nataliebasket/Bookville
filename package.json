@@ -23,7 +23,8 @@
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-plumber": "^1.2.1"
+    "gulp-plumber": "^1.2.1",
+    "gulp-twig": "^1.2.0"
   },
   "type": "module"
 }

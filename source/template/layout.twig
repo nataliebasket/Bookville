@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Интернет магазин книг Bookville">
+  <meta name="keywords" content="Книги, покупки, чтение, отдых, книжный сомелье">
+  <title>{{ title }}</title>
+</head>
+
+<body class="page__body">
+
+  {% include "header.twig" %}
+
+  <main class="main">
+    {% block page %}{% endblock %}
+  </main>
+
+  {% include "footer.twig" %}
+
+</body>
+</html>

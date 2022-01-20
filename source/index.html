@@ -1,14 +1,28 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Привет новый сайт</h1>
-    <h2>как дела?</h2>
-    <h2>как настроение?</h2>
-</body>
-</html>
+{% extends "./template/layout.twig" %}
+
+{% block page %}
+
+    <h1 class="page__hidden">Bookville - интернет магазин хороших книг</h1>
+    <section class="slider">
+      <h2 class="page__hidden">Каталог</h2>
+      <button class="slider-button button-left" type="button">
+          <span class="visually-hidden">Предыдущая карточка.</span>
+      </button>
+      <img src="" alt="" class="slider__image">
+      <a href="" class="slider__link"></a>
+      <button class="slider-button button-right" type="button">
+          <span class="visually-hidden">Следующая карточка.</span>
+      </button>
+    </section>
+    <section class="advantages">
+      <h2 class="page__hidden">Наши преимущества</h2>
+      <ol class="advantages__list">
+        <li class="advantages__item">Консультация книжного сомелье</li>
+        <li class="advantages__item">Доставка 1-2 дня</li>
+        <li class="advantages__item">Уникальные подборки книг</li>
+        <li class="advantages__item">Эстетическая упаковка</li>
+      </ol>
+    </section>
+
+{% endblock %}
+
