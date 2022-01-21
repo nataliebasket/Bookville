@@ -4,7 +4,9 @@
         <span class="page__hidden">Открыть меню.</span>
     </button>
     <ul class="navigation__list">
-        <li class="navigation__item">Пункты меню</li>
+      {% for item in mainmenu %}
+        <li class="navigation__item">{{item}}</li>
+      {% endfor %}
     </ul>
   </nav>
   <button class="header__search" type="button">

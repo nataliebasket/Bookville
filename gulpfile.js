@@ -5,6 +5,7 @@ import del from "del";
 import plumber from "gulp-plumber";//перехватка ошибок
 import htmlmin from "gulp-htmlmin";
 import twig from "gulp-twig";
+import data from "./source/template/data.js";
 
 const { src, dest, watch, series, parallel} = gulp; //сокращение для обращения напрямую
 
@@ -19,9 +20,7 @@ export function html() {
   return src("./source/*.html")
   .pipe(plumber())
   .pipe(twig({
-    data: {
-      title: "Наталёк!"
-      }
+    data: data
     }))
   .pipe(htmlmin({collapseWhitespace: true}))
   .pipe(dest("./public"))
