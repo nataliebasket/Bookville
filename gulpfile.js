@@ -7,16 +7,19 @@ import htmlmin from "gulp-htmlmin";
 import twig from "gulp-twig";
 import data from "./source/template/data.js";
 
+import postcss from "gulp-postcss";
+import postImport from "postcss-import"
+
 const { src, dest, watch, series, parallel} = gulp; //сокращение для обращения напрямую
 
 //Задачи
-export function copy() {
-  return src("./source/*.html")//создаем файловый поток чтения
-  .pipe(dest("./public"))
+export function copy () {
+  return src("./source/img/**/*.{png,jpg}")
+  .pipe(dest("public/img"))
 }
 
 //Обработка HTML
-export function html() {
+export function html () {
   return src("./source/*.html")
   .pipe(plumber())
   .pipe(twig({
@@ -25,6 +28,17 @@ export function html() {
   .pipe(htmlmin({collapseWhitespace: true}))
   .pipe(dest("./public"))
   .pipe(browserSync.stream())
+}
+
+//Обработка CSS
+export function styles () {
+  return src("./source/styles/*.css", { sourcemaps: true })
+    .pipe(plumber())
+    .pipe(postcss([
+      postImport()
+    ]))
+    .pipe(dest("./public/styles", { sourcemaps: true }))
+    .pipe(browserSync.stream());
 }
 
 //Удаление public
@@ -45,11 +59,14 @@ export function server () {
 
 //Наблюдатель
 export function watcher () {
+  watch("./source/styles/**/*.css", series(styles));
   watch("./source/*.html", html);
 }
 
 export default series (
   clear,
+  copy,
   html,
-  parallel(watcher, server)
+  styles,
+  parallel (watcher, server)
 );
