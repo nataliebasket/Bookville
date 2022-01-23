@@ -7,6 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp"
   },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all",
+    "not < 0.25%"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nataliebasket/Bookville.git"
@@ -24,7 +31,9 @@
     "gulp": "^4.0.2",
     "gulp-htmlmin": "^5.0.1",
     "gulp-plumber": "^1.2.1",
-    "gulp-twig": "^1.2.0"
+    "gulp-postcss": "^9.0.1",
+    "gulp-twig": "^1.2.0",
+    "postcss-import": "^14.0.2"
   },
   "type": "module"
 }
