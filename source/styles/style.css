@@ -1,2 +1,4 @@
-@import "/blocks/slider.css";
-@import "/blocks/advantages.css";
+@import "global/fonts.css";
+@import "blocks/header.css";
+@import "blocks/slider.css";
+@import "blocks/advantages.css";

@@ -9,11 +9,13 @@ import data from "./source/template/data.js";
 
 import postcss from "gulp-postcss";
 import postImport from "postcss-import"
+import postUrl from "postcss-url";
+import postNested from "postcss-nested";
 
 const { src, dest, watch, series, parallel} = gulp; //сокращение для обращения напрямую
 
 //Задачи
-export function copy () {
+export function copyImg () {
   return src("./source/img/**/*.{png,jpg}")
   .pipe(dest("public/img"))
 }
@@ -35,7 +37,9 @@ export function styles () {
   return src("./source/styles/*.css", { sourcemaps: true })
     .pipe(plumber())
     .pipe(postcss([
-      postImport()
+      postImport(),
+      postUrl(),
+      postNested()
     ]))
     .pipe(dest("./public/styles", { sourcemaps: true }))
     .pipe(browserSync.stream());
@@ -58,14 +62,25 @@ export function server () {
 }
 
 //Наблюдатель
-export function watcher () {
+function watcher () {
   watch("./source/styles/**/*.css", series(styles));
   watch("./source/*.html", html);
 }
 
+export function copyOther () {
+  return src([
+    "./source/fonts/*.{woff2,woff}",
+    "./source/svg/*.svg",
+  ], {
+    base: "./source"
+  })
+    .pipe(dest("./public"))
+}
+
 export default series (
   clear,
-  copy,
+  copyImg,
+  copyOther,
   html,
   styles,
   parallel (watcher, server)

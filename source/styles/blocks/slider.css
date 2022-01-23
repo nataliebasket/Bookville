@@ -1,4 +1,18 @@
 .slider {
   background-color: #e5e5e5;
-  color: red;
+}
+
+.slider__link {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #887569;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 11px 19px 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
 }
