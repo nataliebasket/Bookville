@@ -29,7 +29,7 @@ export function html () {
     }))
   .pipe(htmlmin({collapseWhitespace: true}))
   .pipe(dest("./public"))
-  .pipe(browserSync.stream())
+  //.pipe(browserSync.stream())
 }
 
 //Обработка CSS
@@ -51,20 +51,26 @@ export function clear () {
 }
 
 //Сервер
-export function server () {
+export function server (done) {
   browserSync.init({
     server: {
         baseDir: "./public"//корневая папка, тут запускается сервер
     },
     notify: false,// уведомления
     ui: false// пользовательский интерфейс
-});
+  });
+  done();
+}
+
+function reloadServer (done) {
+  browserSync.reload();
+  done();
 }
 
 //Наблюдатель
 function watcher () {
   watch("./source/styles/**/*.css", series(styles));
-  watch("./source/*.html", html);
+  watch("./source/**/*.{html,twig}", series(html, reloadServer));
 }
 
 export function copyOther () {
@@ -79,9 +85,14 @@ export function copyOther () {
 
 export default series (
   clear,
-  copyImg,
-  copyOther,
-  html,
-  styles,
-  parallel (watcher, server)
+  parallel(
+    styles,
+    html,
+    copyImg,
+    copyOther
+  ),
+  series (
+    server,
+    watcher
+  )
 );

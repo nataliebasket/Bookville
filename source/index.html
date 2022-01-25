@@ -1,19 +1,20 @@
 {% extends "./template/layout.twig" %}
 
 {% block page %}
-
+  <div class="page__centerer">
     <h1 class="page__hidden">Bookville - интернет магазин хороших книг</h1>
     <section class="slider">
       <h2 class="page__hidden">Каталог</h2>
-      <button class="slider-button button-left" type="button">
-          <span class="visually-hidden">Предыдущая карточка.</span>
+      <button class="slider-button slider-button--left" type="button">
+          <span class="page__hidden">Предыдущая карточка.</span>
       </button>
-      <img src="./img/img-slider1@1x.jpg" alt="фото девушки и бирюзовой книги" class="slider__image">
-      <a href="#" class="slider__link">Перейти в каталог</a>
-      <button class="slider-button button-right" type="button">
-          <span class="visually-hidden">Следующая карточка.</span>
+      <img class="slider__image" src="./img/img-slider1@1x.jpg" alt="фото девушки и бирюзовой книги" class="slider__image" width="280" height="180">
+      <a href="#" class="slider__link"><span class="slider__link-text">Перейти в каталог</span></a>
+      <button class="slider-button slider-button--right" type="button">
+          <span class="page__hidden">Следующая карточка.</span>
       </button>
     </section>
+
 
     <section class="advantages">
       <h2 class="page__hidden">Наши преимущества</h2>
@@ -128,7 +129,8 @@
         <img src="" alt="фото обложки" width="146" height="87" class="book__img">
       </article>
     </section>
-
+  </div>
+  
     <article class="help-call">
       <p class="help-call__title">Не можете определиться с выбором?</p>
       <p class="help-call__text">Закажите бесплатную консультацию с нашим книжным сомелье</p>
@@ -139,6 +141,4 @@
       </form>
     </article>
 
-
 {% endblock %}
-

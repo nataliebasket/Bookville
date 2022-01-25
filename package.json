@@ -4,7 +4,8 @@
   "description": "Верстка интернет магазина книг",
   "main": "index.js",
   "scripts": {
-    "stylelint": "stylelint \"source/**/*.css\"",
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/styles/**/*.{css,pcss}\"",
     "test": "npm run stylelint",
     "start": "gulp"
   },
@@ -27,6 +28,7 @@
   },
   "homepage": "https://github.com/nataliebasket/Bookville#readme",
   "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
     "browser-sync": "^2.27.7",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
@@ -34,11 +36,22 @@
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.1",
     "gulp-twig": "^1.2.0",
+    "postcss": "^8.4.5",
     "postcss-import": "^14.0.2",
     "postcss-nested": "^5.0.6",
     "postcss-url": "^10.1.3",
     "stylelint": "^14.3.0",
     "stylelint-config-standard-scss": "^3.0.0"
   },
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "source/**/*.html",
+    "source/**/*.twig",
+    "source/**/*.js",
+    "source/**/*.svg",
+    "source/sass/**/*.scss",
+    "/source/styles/**/*.{css,pcss}"
+  ],
   "type": "module"
 }

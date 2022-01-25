@@ -1,9 +1,39 @@
 .advantages {
-  background-color: #f4f0eb;
-  color: #373737;
-  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
   line-height: 17px;
+  counter-reset: section;
+}
+
+.advantages__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.advantages__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 13px;
+
+  &::before {
+    width: 48px;
+    height: 48px;
+    counter-increment: section;
+    content: counter(section);
+    text-align: center;
+    padding-top: auto;
+    //position: absolute;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--accent-color);
+    background-image: url("../../svg/circles.svg");
+    //background-color: var(--accent-color);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
