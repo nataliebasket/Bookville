@@ -1,0 +1,47 @@
+.events {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.events__text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  text-align: center;
+}
+
+.events__link {
+  box-sizing: border-box;
+  min-width: 175px;
+  padding: 11px 19px 10px;
+  background-color: transparent;
+  border: 1px solid #887569;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.events__link-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--accent-color, #887569);
+  text-transform: uppercase;
+
+  &--decor::after {
+    content: "";
+    display: block;
+    width: 9px;
+    height: 9px;
+    background-image: url("../../svg/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

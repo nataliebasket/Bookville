@@ -24,15 +24,14 @@
     counter-increment: section;
     content: counter(section);
     text-align: center;
-    padding-top: auto;
-    //position: absolute;
+    box-sizing: border-box;
+    padding-top: 14px;
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
     line-height: 24px;
     color: var(--accent-color);
     background-image: url("../../svg/circles.svg");
-    //background-color: var(--accent-color);
     background-position: center;
     background-repeat: no-repeat;
   }

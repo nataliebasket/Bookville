@@ -28,7 +28,7 @@
   color: var(--accent-color, #887569);
   text-transform: uppercase;
 
-  &::after {
+  &--decor::after {
     content: "";
     display: block;
     width: 9px;

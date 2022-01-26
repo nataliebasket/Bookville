@@ -40,3 +40,16 @@
   border: none;
   clip: rect(0 0 0 0);
 }
+
+.page__title-text {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--title-color);
+}
+
+.page__card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5px;
+}
