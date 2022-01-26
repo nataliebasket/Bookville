@@ -1,4 +1,62 @@
 .slider {
-  background-color: #e5e5e5;
-  color: red;
+  position: relative;
+  text-align: center;
+}
+
+.slider__link {
+  box-sizing: border-box;
+  min-width: 192px;
+  padding: 11px 19px 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+}
+
+.slider__link-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--accent-color, #887569);
+  text-transform: uppercase;
+
+  &--decor::after {
+    content: "";
+    display: block;
+    width: 9px;
+    height: 9px;
+    background-image: url("../../svg/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.slider-button {
+  position: absolute;
+  width: 11px;
+  height: 19px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--left {
+    left: -15px;
+    background-image: url("../../svg/left.svg");
+  }
+
+  &--right {
+    right: -15px;
+    background-image: url("../../svg/right.svg");
+  }
 }

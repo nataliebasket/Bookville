@@ -1,0 +1,76 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  display: block;
+}
+
+.header__search {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 0;
+    background-image: url("../../svg/search.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.header__like {
+  position: relative;
+  width: 21px;
+  height: 21px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 0;
+    background-image: url("../../svg/heart.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.header__basket {
+  position: relative;
+  width: 21px;
+  height: 21px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 0;
+    background-image: url("../../svg/basket.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

@@ -1,0 +1,10 @@
+.popular__title {
+  text-align: center;
+}
+
+.popular__link {
+  text-decoration: none;
+  color: var(--icons-color);
+  box-sizing: border-box;
+  width: auto;
+}

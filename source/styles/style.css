@@ -1,2 +1,12 @@
-@import "/blocks/slider.css";
-@import "/blocks/advantages.css";
+@import "global/fonts.css";
+@import "global/variables.css";
+@import "blocks/page.css";
+@import "blocks/navigation.css";
+@import "blocks/header.css";
+@import "blocks/slider.css";
+@import "blocks/advantages.css";
+@import "blocks/about.css";
+@import "blocks/popular.css";
+@import "blocks/book.css";
+@import "blocks/button.css";
+@import "blocks/events.css";

@@ -1,17 +1,19 @@
 {% extends "./template/layout.twig" %}
 
 {% block page %}
-
+  <div class="page__centerer">
     <h1 class="page__hidden">Bookville - интернет магазин хороших книг</h1>
     <section class="slider">
       <h2 class="page__hidden">Каталог</h2>
-      <button class="slider-button button-left" type="button">
-          <span class="visually-hidden">Предыдущая карточка.</span>
+      <button class="slider-button slider-button--left" type="button">
+          <span class="page__hidden">Предыдущая карточка.</span>
       </button>
-      <img src="./img/img-slider1@1x.jpg" alt="фото девушки и бирюзовой книги" class="slider__image">
-      <a href="#" class="slider__link"></a>
-      <button class="slider-button button-right" type="button">
-          <span class="visually-hidden">Следующая карточка.</span>
+      <img class="slider__image" src="./img/img-slider1-m@1x.jpg" alt="фото девушки и бирюзовой книги" class="slider__image" width="280" height="180">
+      <a href="#" class="slider__link">
+        <span class="slider__link-text slider__link-text--decor">Перейти в каталог</span>
+      </a>
+      <button class="slider-button slider-button--right" type="button">
+          <span class="page__hidden">Следующая карточка.</span>
       </button>
     </section>
 
@@ -24,79 +26,136 @@
         <li class="advantages__item">Эстетическая упаковка</li>
       </ol>
     </section>
+  </div>
 
-    <section class="about">
+  <section class="about">
+    <div class="page__centerer">
       <span class="about__name">Bookville</span>
-      <h2 class="about__title">О нашей компании</h2>
+      <h2 class="about__title page__title-text">О нашей компании</h2>
       <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat  incididunt ut laboret.</p>
-    </section>
+      <ul class="about__pagination">
+        <li class="about__pagination-item">
+          <button class="about__pagination-button" type="button">
+            <span class="page__hidden">1 карточка.</span>
+          </button>
+        </li>
+        <li class="about__pagination-item">
+          <button class="about__pagination-button" type="button">
+            <span class="page__hidden">2 карточка.</span>
+          </button>
+        </li>
+        <li class="about__pagination-item">
+          <button class="about__pagination-button" type="button">
+            <span class="page__hidden">3 карточка.</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </section>
 
+  <div class="page__centerer">
     <section class="popular">
-      <h2 class="popular__title">Популярные товары</h2>
-      <article class="book">
-        <img src="" alt="фото обложки" width="99" height="132" class="book__img">
-        <span class="book__autor ">Автор первый</span>
-        <span class="book__name">Название первое</span>
-        <span class="book__cost">790 ₽</span>
-        <button class="book__add-basket" type="button"></button>
-      </article>
-      <article class="book">
-        <img src="" alt="фото обложки" width="99" height="132" class="book__img">
-        <span class="book__autor ">Автор второй</span>
-        <span class="book__name">Название второе</span>
-        <span class="book__cost">990 ₽</span>
-        <button class="book__add-basket" type="button"></button>
-      </article>
-      <a href="#" class="popular__look-all">Смотреть все</a>
+      <h2 class="popular__title page__title-text">Популярные товары</h2>
+      <div class="page__card-container">
+        <article class="book">
+          <div class="book__img-wrapper book__img-wrapper--like">
+            <img class="book__img" src="./img/catalog/book1-m.jpg" alt="фото обложки" width="99" height="132" class="book__img">
+          </div>
+          <span class="book__autor">Ольга Примаченко</span>
+          <span class="book__name">К себе нежно</span>
+          <div class="book__cost-container">
+            <span class="book__cost">790 ₽</span>
+            <button class="book__add-basket" type="button"></button>
+          </div>
+        </article>
+        <article class="book">
+          <div class="book__img-wrapper book__img-wrapper--like">
+            <img class="book__img" src="./img/catalog/book1-m.jpg" alt="фото обложки" width="99" height="132" class="book__img">
+          </div>
+          <span class="book__autor">Ольга Примаченко</span>
+          <span class="book__name">К себе нежно</span>
+          <div class="book__cost-container">
+            <span class="book__cost">790 ₽</span>
+            <button class="book__add-basket" type="button"></button>
+          </div>
+        </article>
+      </div>
+      <a href="#" class="button button__look-all button__look-all--decor">Смотреть все</a>
     </section>
 
     <section class="discount">
-      <h2 class="discount__title">Скидки</h2>
-      <article class="book">
-        <img src="" alt="фото обложки" width="99" height="132" class="book__img">
-        <span class="book__autor">Ольга Примаченко</span>
-        <span class="book__name">К себе нежно</span>
-        <span class="book__cost">790 ₽</span>
-        <button class="book__add-basket" type="button"></button>
-      </article>
-      <article class="book">
-        <img src="" alt="фото обложки" width="99" height="132" class="book__img">
-        <span class="book__autor">Ольга Примаченко</span>
-        <span class="book__name">К себе нежно</span>
-        <span class="book__cost">790 ₽</span>
-        <button class="book__add-basket" type="button"></button>
-      </article>
-      <a href="#" class="discount__look-all">Смотреть все</a>
+      <h2 class="discount__title page__title-text">Скидки</h2>
+      <div class="page__card-container">
+        <article class="book">
+          <div class="book__img-wrapper book__img-wrapper--like">
+            <span class="book__img-sale">5%</span>
+            <img class="book__img" src="./img/catalog/book1-m.jpg" alt="фото обложки" width="99" height="132" class="book__img">
+          </div>
+          <span class="book__autor">Ольга Примаченко</span>
+          <span class="book__name">К себе нежно</span>
+          <div class="book__cost-container">
+            <span class="book__cost">790 ₽</span>
+            <button class="book__add-basket" type="button"></button>
+          </div>
+        </article>
+        <article class="book">
+          <div class="book__img-wrapper book__img-wrapper--like">
+            <span class="book__img-sale">5%</span>
+            <img class="book__img" src="./img/catalog/book1-m.jpg" alt="фото обложки" width="99" height="132" class="book__img">
+          </div>
+          <span class="book__autor">Ольга Примаченко</span>
+          <span class="book__name">К себе нежно</span>
+          <div class="book__cost-container">
+            <span class="book__cost">790 ₽</span>
+            <button class="book__add-basket" type="button"></button>
+          </div>
+        </article>
+      </div>
+
+      <a href="#" class="button button__look-all button__look-all--decor">Смотреть все</a>
+
     </section>
 
     <section class="recommendation">
-      <h2 class="recommendation__title">BOOKVILLE рекомендует</h2>
-      <article class="book">
-        <img src="" alt="фото обложки" width="99" height="132" class="book__img">
-        <span class="book__autor">Ольга Примаченко</span>
-        <span class="book__name">К себе нежно</span>
-        <span class="book__cost">790 ₽</span>
-        <button class="book__add-basket" type="button"></button>
-      </article>
-      <article class="book">
-        <img src="" alt="фото обложки" width="99" height="132" class="book__img">
-        <span class="book__autor">Ольга Примаченко</span>
-        <span class="book__name">К себе нежно</span>
-        <span class="book__cost">790 ₽</span>
-        <button class="book__add-basket" type="button"></button>
-      </article>
-      <a href="#" class="recommendation__look-all">Смотреть все</a>
+      <h2 class="recommendation__title page__title-text">BOOKVILLE рекомендует</h2>
+      <div class="page__card-container">
+        <article class="book">
+          <div class="book__img-wrapper book__img-wrapper--like">
+            <img class="book__img" src="./img/catalog/book1-m.jpg" alt="фото обложки" width="99" height="132" class="book__img">
+          </div>
+          <span class="book__autor">Ольга Примаченко</span>
+          <span class="book__name">К себе нежно</span>
+          <div class="book__cost-container">
+            <span class="book__cost">790 ₽</span>
+            <button class="book__add-basket" type="button"></button>
+          </div>
+        </article>
+        <article class="book">
+          <div class="book__img-wrapper book__img-wrapper--like">
+            <img class="book__img" src="./img/catalog/book1-m.jpg" alt="фото обложки" width="99" height="132" class="book__img">
+          </div>
+          <span class="book__autor">Ольга Примаченко</span>
+          <span class="book__name">К себе нежно</span>
+          <div class="book__cost-container">
+            <span class="book__cost">790 ₽</span>
+            <button class="book__add-basket" type="button"></button>
+          </div>
+        </article>
+      </div>
+      <a href="#" class="button button__look-all button__look-all--decor">Смотреть все</a>
     </section>
 
     <section class="events">
-      <h2 class="events__title">О наших мероприятиях</h2>
+      <h2 class="events__title page__title-text">О наших мероприятиях</h2>
       <p class="events__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat  incididunt ut laboret.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat  incididunt ut laboret.</p>
-      <img src="" alt="фото графия людей в зале" width="298" height="191" class="events__img">
-      <a href="#" class="events__more">Подробнее</a>
+      <img src="./img/events-m@1x.jpg" alt="фото графия людей в зале" width="280" height="180" class="events__img">
+      <a href="#" class="events__link">
+        <span class="events__link-text events__link-text--decor">Подробнее</span>
+      </a>
     </section>
 
     <section class="book-sets">
-      <h2 class="Подборки книг">Подборки книг</h2>
+      <h2 class="book-sets__title page__title-text">Подборки книг</h2>
       <article class="set">
         <span class="set__name">Для уютного вечера</span>
         <span class="set__count">15 книг</span>
@@ -128,9 +187,10 @@
         <img src="" alt="фото обложки" width="146" height="87" class="book__img">
       </article>
     </section>
+  </div>
 
     <article class="help-call">
-      <p class="help-call__title">Не можете определиться с выбором?</p>
+      <p class="help-call__title page__title-text">Не можете определиться с выбором?</p>
       <p class="help-call__text">Закажите бесплатную консультацию с нашим книжным сомелье</p>
       <form action="#" method="post">
         <input type="text" placeholder="Ваше имя" required>
@@ -139,6 +199,4 @@
       </form>
     </article>
 
-
 {% endblock %}
-

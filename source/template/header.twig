@@ -1,21 +1,40 @@
-<header class="header page__centetrer">
-  <nav class="navigation">
+<header class="header page__centerer">
+
+  <nav class="navigation navigation--closed header__menu">
     <button class="navigation__button" type="button">
         <span class="page__hidden">Открыть меню.</span>
     </button>
-    <ul class="navigation__list">
-      {% for item in mainmenu %}
-        <li class="navigation__item">{{item}}</li>
-      {% endfor %}
-    </ul>
+    <div class="navigation__container">
+      <ul class="navigation__list">
+        <li class="navigation__item navigation__item--bold">Меню
+          <ul class="navigation__sublist">
+            {% for item in menu %}
+              <li class="navigation__item">{{item}}</li>
+            {% endfor %}
+          </ul>
+        </li>
+        <li class="navigation__item navigation__item--bold">Подразделы
+          <ul class="navigation__sublist">
+            {% for item in submenu %}
+              <li class="navigation__item">{{item}}</li>
+            {% endfor %}
+          </ul>
+        </li>
+      </ul>
+    </div>
   </nav>
+
   <button class="header__search" type="button">
   </button>
+
   <a class="header__logo" href="#" >
-      <img alt="Логотип магазина" width="96" height="52">
+      <img src="../img/logo.png" alt="Логотип магазина" width="96" height="52">
   </a>
+
   <button class="header__like" type="button">
   </button>
+
   <button class="header__basket" type="button">
   </button>
+
 </header>

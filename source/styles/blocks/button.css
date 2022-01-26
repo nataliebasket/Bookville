@@ -1,0 +1,25 @@
+.button__look-all {
+  display: inline-flex;
+  //flex-direction: row;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--icons-color);
+  box-sizing: border-box;
+  text-decoration: none;
+
+  &--decor::before {
+    content: "";
+    width: 2px;
+    height: 4px;
+    margin-left: 4px;
+    display: inline-block;
+    background-image: url("../../svg/right.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

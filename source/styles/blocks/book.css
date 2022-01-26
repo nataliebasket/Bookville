@@ -1,0 +1,70 @@
+.book {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 137px;
+  justify-content: center;
+  background-color: var(--background-card-color);
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.book__img-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+
+  &--like::after {
+    content: "";
+    position: absolute;
+    width: 29px;
+    height: 29px;
+    top: 0;
+    right: -15px;
+    border-radius: 50%;
+    background-color: #f3e4de;
+    background-image: url("../../svg/heart.svg");
+    background-size: 15px 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.book__img-sale {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  position: absolute;
+  top: -15px;
+  left: -12px;
+}
+
+.book__autor {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.book__name {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.book__cost {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+/* .book__add-basket {
+
+} */
