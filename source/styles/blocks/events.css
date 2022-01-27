@@ -16,7 +16,7 @@
 .events__link {
   box-sizing: border-box;
   min-width: 175px;
-  padding: 11px 19px 10px;
+  padding: 13px 32px;
   background-color: transparent;
   border: 1px solid #887569;
   border-radius: 8px;
@@ -38,9 +38,10 @@
   &--decor::after {
     content: "";
     display: block;
-    width: 9px;
+    width: 14px;
     height: 9px;
     background-image: url("../../svg/arrow.svg");
+    background-size: 14px 9px;
     background-repeat: no-repeat;
     background-position: center;
   }

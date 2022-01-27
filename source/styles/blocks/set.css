@@ -1,0 +1,26 @@
+.set {
+  display: grid;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.set__name {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--menu-text-color);
+  padding: 5px 8px 5px 8px;
+}
+
+.set__count {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  color: var(--light-text-color);
+  padding: 4px 8px 11px 8px;
+}
+
+.set__img {
+  display: block;
+  border-radius: 5px;
+}

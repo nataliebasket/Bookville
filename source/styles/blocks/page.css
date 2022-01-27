@@ -46,6 +46,7 @@
   font-size: 18px;
   line-height: 22px;
   color: var(--title-color);
+  text-align: center;
 }
 
 .page__card-container {

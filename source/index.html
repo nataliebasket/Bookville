@@ -154,49 +154,59 @@
       </a>
     </section>
 
-    <section class="book-sets">
-      <h2 class="book-sets__title page__title-text">Подборки книг</h2>
-      <article class="set">
-        <span class="set__name">Для уютного вечера</span>
-        <span class="set__count">15 книг</span>
-        <img src="" alt="фото обложки" width="146" height="87" class="book__img">
-      </article>
-      <article class="set">
-        <span class="set__name">Для проактивных родителей</span>
-        <span class="set__count">8 книг</span>
-        <img src="" alt="фото обложки" width="146" height="87" class="book__img">
-      </article>
-      <article class="set">
-        <span class="set__name">О психологии</span>
-        <span class="set__count">5 книг</span>
-        <img src="" alt="фото обложки" width="146" height="87" class="book__img">
-      </article>
-      <article class="set">
-        <span class="set__name">Для руководителя</span>
-        <span class="set__count">19 книг</span>
-        <img src="" alt="фото обложки" width="146" height="87" class="book__img">
-      </article>
-      <article class="set">
-        <span class="set__name">О здоровье</span>
-        <span class="set__count">11 книг</span>
-        <img src="" alt="фото обложки" width="146" height="87" class="book__img">
-      </article>
-      <article class="set">
-        <span class="set__name">Для любознаек</span>
-        <span class="set__count">13 книг</span>
-        <img src="" alt="фото обложки" width="146" height="87" class="book__img">
-      </article>
+    <section class="book-set">
+      <h2 class="book-set__title page__title-text">Подборки книг</h2>
+      <div class="book-set__container">
+        <article class="set">
+          <span class="set__name">Для уютного вечера</span>
+          <span class="set__count">15 книг</span>
+          <img class="set__img" src="./img/set-winter-m@1x.jpg" alt="фото обложки" width="137" height="82">
+        </article>
+        <article class="set">
+          <span class="set__name">Для проактивных родителей</span>
+          <span class="set__count">8 книг</span>
+          <img class="set__img" src="./img/set-summer-m@1x.jpg" alt="фото обложки" width="137" height="82">
+        </article>
+        <article class="set">
+          <span class="set__name">О психологии</span>
+          <span class="set__count">5 книг</span>
+          <img class="set__img" src="./img/set-psych-m@1x.jpg" alt="фото обложки" width="137" height="82">
+        </article>
+        <article class="set">
+          <span class="set__name">Для руководителя</span>
+          <span class="set__count">19 книг</span>
+          <img class="set__img" src="./img/set-buisness-m@1x.jpg" alt="фото обложки" width="137" height="82">
+        </article>
+        <article class="set">
+          <span class="set__name">О здоровье</span>
+          <span class="set__count">11 книг</span>
+          <img class="set__img" src="./img/set-health-m@1x.jpg" alt="фото обложки" width="137" height="82">
+        </article>
+        <article class="set">
+          <span class="set__name">Для любознаек</span>
+          <span class="set__count">13 книг</span>
+          <img class="set__img" src="./img/set-kids-m@1x.jpg" alt="фото обложки" width="137" height="82">
+        </article>
+      </div>
     </section>
   </div>
 
     <article class="help-call">
-      <p class="help-call__title page__title-text">Не можете определиться с выбором?</p>
-      <p class="help-call__text">Закажите бесплатную консультацию с нашим книжным сомелье</p>
-      <form action="#" method="post">
-        <input type="text" placeholder="Ваше имя" required>
-        <input type="tel" placeholder="Ваш номер" required>
-        <button type="submit">Оставить заявку</button>
-      </form>
+      <div class="page__centerer">
+        <p class="help-call__title page__title-text">Не можете определиться с выбором?</p>
+        <p class="help-call__text">Закажите бесплатную консультацию с нашим книжным сомелье</p>
+        <form class="form" action="#" method="post">
+
+          <label class="page__hidden" for="name">Ваше имя.</label>
+          <input class="form__input" type="text" id="name" placeholder="Ваше имя" required>
+
+          <label class="page__hidden" for="phone">Ваше имя.</label>
+          <input class="form__input"  type="tel" id="phone" placeholder="Ваш номер" required>
+
+          <button type="submit">Оставить заявку</button>
+          
+        </form>
+      </div>
     </article>
 
 {% endblock %}

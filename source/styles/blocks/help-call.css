@@ -1,0 +1,10 @@
+.help-call {
+  background-color: var(--background-call-color);
+}
+
+.help-call__text {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+}

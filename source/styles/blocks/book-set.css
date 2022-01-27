@@ -1,0 +1,7 @@
+.book-set__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(1fr, 3);
+  column-gap: 6px;
+  row-gap: 11px;
+}
