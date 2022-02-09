@@ -1,0 +1,38 @@
+{% extends "./template/layout.twig" %}
+
+{% block title %}Bookville - Контакты{% endblock %}
+
+{% block page %}
+<div class="page__centerer">
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs__item breadcrumbs__item--arrow"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Контакты</a></li>
+  </ul>
+
+  <h1 class="page__title-text page__title-text--color">Контакты</h1>
+  <section class="contacts">
+
+    <address class="contacts__text contacts__address contacts__address--decor">Shopping MallDova - Moldova, Chisinau, str. Arborilor 21</address>
+
+    <a class="contacts__text contacts__phone contacts__phone--decor" href="tel:37369134736">+373 69 13 47 36</a>
+    <a class="contacts__text contacts__phone contacts__phone--decor" href="tel:37369134736">+373 69 97 66 11</a>
+    <a class="contacts__text contacts__mail contacts__mail--decor" href="mailto:bookville@gmail.com">bookville@gmail.com</a>
+
+    <p class="contacts__text-social">Мы в соц. сетях</p>
+
+    <ul class="contacts__social-list">
+      <li class="contacts__social-item">
+        <a class="contacts__social-link contacts__social-link--fb" href="javascrip:undefined"></a>
+      </li>
+      <li class="contacts__social-item">
+        <a class="contacts__social-link contacts__social-link--insta" href="javascrip:undefined"></a>
+      </li>
+    </ul>
+
+    <img class="contacts__photo" src="../../img/map-m@1x.jpg" alt="Фото команды магазина." width="280" height="170">
+
+  </section>
+
+</div>
+
+{% endblock %}

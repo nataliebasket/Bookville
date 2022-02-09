@@ -49,6 +49,11 @@
   text-align: center;
 }
 
+.page__title-text--color {
+  color: #000000;
+  text-align: left;
+}
+
 .page__card-container {
   display: grid;
   grid-template-columns: 1fr 1fr;

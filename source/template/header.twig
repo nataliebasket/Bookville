@@ -1,3 +1,5 @@
+
+
 <header class="header page__centerer">
 
   <nav class="navigation navigation--closed header__menu">
@@ -9,7 +11,7 @@
         <li class="navigation__item navigation__item--bold">Меню
           <ul class="navigation__sublist">
             {% for item in menu %}
-              <li class="navigation__item">{{item}}</li>
+              <li class="navigation__item"><a href="{{item.path}}">{{item.name}}</a></li>
             {% endfor %}
           </ul>
         </li>

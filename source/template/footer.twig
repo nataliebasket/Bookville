@@ -1,8 +1,17 @@
 <footer class="footer">
-  <a class="header__logo" href="#" >
-    <img alt="Логотип магазина" width="100" height="54">
+
+  <a class="footer__logo" href="index.html" >
+    <img src="../img/logo.png" alt="Логотип магазина" width="100" height="54">
   </a>
+
   <ul class="footer__list">
-    <li class="footer__item">Пункты меню подвала</li>
+    {% for item in menu %}
+      <li class="footer__item">
+        <a href="{{item.path}}" class="footer__link">{{item.name}}</a>
+      </li>
+    {% endfor %}
   </ul>
+
+  <a class="footer__phone footer__phone--decor" href="tel:79991400000">+7 999 140 00 00</a>
+
 </footer>

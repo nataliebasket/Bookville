@@ -1,5 +1,7 @@
 {% extends "./template/layout.twig" %}
 
+{% block title %}Bookville - Главная{% endblock %}
+
 {% block page %}
   <div class="page__centerer">
     <h1 class="page__hidden">Bookville - интернет магазин хороших книг</h1>
@@ -28,24 +30,24 @@
     </section>
   </div>
 
-  <section class="about">
+  <section class="slider-about">
     <div class="page__centerer">
-      <span class="about__name">Bookville</span>
-      <h2 class="about__title page__title-text">О нашей компании</h2>
-      <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat  incididunt ut laboret.</p>
-      <ul class="about__pagination">
-        <li class="about__pagination-item">
-          <button class="about__pagination-button" type="button">
+      <span class="slider-about__name">Bookville</span>
+      <h2 class="slider-about__title page__title-text">О нашей компании</h2>
+      <p class="slider-about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat  incididunt ut laboret.</p>
+      <ul class="slider-about__pagination">
+        <li class="slider-about__pagination-item">
+          <button class="slider-about__pagination-button" type="button">
             <span class="page__hidden">1 карточка.</span>
           </button>
         </li>
-        <li class="about__pagination-item">
-          <button class="about__pagination-button" type="button">
+        <li class="slider-about__pagination-item">
+          <button class="slider-about__pagination-button" type="button">
             <span class="page__hidden">2 карточка.</span>
           </button>
         </li>
-        <li class="about__pagination-item">
-          <button class="about__pagination-button" type="button">
+        <li class="slider-about__pagination-item">
+          <button class="slider-about__pagination-button" type="button">
             <span class="page__hidden">3 карточка.</span>
           </button>
         </li>
@@ -191,22 +193,8 @@
     </section>
   </div>
 
-    <article class="help-call">
-      <div class="page__centerer">
-        <p class="help-call__title page__title-text">Не можете определиться с выбором?</p>
-        <p class="help-call__text">Закажите бесплатную консультацию с нашим книжным сомелье</p>
-        <form class="form" action="#" method="post">
-
-          <label class="page__hidden" for="name">Ваше имя.</label>
-          <input class="form__input" type="text" id="name" placeholder="Ваше имя" required>
-
-          <label class="page__hidden" for="phone">Ваше имя.</label>
-          <input class="form__input"  type="tel" id="phone" placeholder="Ваш номер" required>
-
-          <button type="submit">Оставить заявку</button>
-          
-        </form>
-      </div>
-    </article>
+{% include "./template/help-call.twig" %}
 
 {% endblock %}
+
+

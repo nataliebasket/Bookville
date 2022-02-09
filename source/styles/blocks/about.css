@@ -1,41 +1,21 @@
-.about {
-  background-color: var(--background-color);
-  border-radius: 5px;
-  text-align: center;
-}
-
-.about__name {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: var(--accent-color);
-}
-
 .about__text {
+  padding: 0;
+  margin: 0;
   font-weight: 300;
   font-size: 14px;
-  line-height: 19px;
-  color: #000000;
-}
+  line-height: 20px;
+  color: var(--title-color);
+  padding-bottom: 11px;
 
-.about__pagination-button {
-  width: 4px;
-  height: 4px;
-  box-sizing: border-box;
-  border: none;
-  background-color: #a5a5a5;
-  border-radius: 50%;
-  cursor: pointer;
-  padding: 1px;
-}
+  &--first-letter::first-letter {
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 78px;
+    color: #000000;
+  }
 
-.about__pagination {
-  margin: 0;
-  padding: 0;
-  width: 23px;
-  list-style-type: none;
-  display: inline-flex;
-  justify-content: space-between;
+  &--center {
+    text-align: center;
+  }
 }
 

@@ -7,6 +7,8 @@
 
 .header__logo {
   display: block;
+  width: 96px;
+  height: 52px;
 }
 
 .header__search {

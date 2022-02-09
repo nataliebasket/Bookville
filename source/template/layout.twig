@@ -6,7 +6,7 @@
   <meta name="description" content="Интернет магазин книг Bookville">
   <meta name="keywords" content="Книги, покупки, чтение, отдых, книжный сомелье">
   <link rel="stylesheet" href="./styles/style.css">
-  <title>{{ title }}</title>
+  <title>{% block title %}{% endblock %}</title>
 </head>
 
 <body class="page__body">
@@ -15,6 +15,7 @@
 
   <main class="main">
     {% block page %}{% endblock %}
+
   </main>
 
   {% include "footer.twig" %}

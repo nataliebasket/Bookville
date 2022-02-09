@@ -1,0 +1,36 @@
+.breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumbs__item {
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--breadcrumbs-color);
+  margin-right: 30px;
+  position: relative;
+}
+
+.breadcrumbs__item--arrow {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -15px;
+    width: 4px;
+    height: 8px;
+    background-image: url("../../svg/bread.svg");
+    background-size: 4px 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.breadcrumbs__link {
+  text-decoration: none;
+  color: var(--breadcrumbs-color);
+}

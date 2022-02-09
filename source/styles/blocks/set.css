@@ -2,6 +2,7 @@
   display: grid;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  width: 146px;
 }
 
 .set__name {

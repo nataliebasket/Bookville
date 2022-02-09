@@ -1,5 +1,7 @@
 .help-call {
   background-color: var(--background-call-color);
+  box-sizing: border-box;
+  padding-top: 25px;
 }
 
 .help-call__text {
@@ -7,4 +9,15 @@
   font-size: 12px;
   line-height: 15px;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 21px;
+}
+
+.help-call__form {
+  width: 100%;
+}
+
+.help-call__title {
+  margin-bottom: 6px;
+  margin-top: 0;
 }

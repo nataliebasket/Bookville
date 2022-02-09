@@ -1,0 +1,29 @@
+.form-help__input {
+  border: none;
+  padding: 15px 32px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  border-radius: 8px;
+  color: var(--form-input-color);
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.form-help__button {
+  border: none;
+  padding: 15px 32px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 100%;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+  background-color: var(--accent-color);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
