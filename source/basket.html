@@ -1,0 +1,31 @@
+{% extends "./template/layout.twig" %}
+
+{% block title %}Bookville - Корзина{% endblock %}
+
+{% block page %}
+<div class="page__centerer">
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs__item breadcrumbs__item--arrow"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Корзина</a></li>
+  </ul>
+
+  <h1 class="page__title-text page__title-text--color">Корзина</h1>
+  <section class="basket">
+    <ul class="basket__list">
+      <li class="basket__item">
+        <img class="basket__img" src="./img/book-basket-m.jpg" alt="фото покупаемой книги" width="80" height="80">
+        <span class="basket__autor">Ольга Примаченко</span>
+        <span class="basket__book-name">К себе нежно</span>
+        <div class="basket_input-container">
+          <button class="basket__button basket__button--minus"></button>
+          <label class="basket__input-label page__hidden" for="input-count"></label>
+          <input class="basket__input" type="number" id="input-count" value="1">
+          <button class="basket__button basket__button--plus"></button>
+          <span class="basket__cost">790 ₽</span>
+        </div>
+      </li>
+    </ul>
+  </section>
+</div>
+
+{% endblock %}
