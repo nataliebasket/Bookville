@@ -1,6 +1,7 @@
 .slider {
   position: relative;
   text-align: center;
+  padding: 20px 0 20px 0;
 }
 
 .slider__link {
@@ -10,7 +11,7 @@
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
   position: absolute;
-  bottom: 15px;
+  bottom: 35px;
   left: 50%;
   transform: translateX(-50%);
   text-decoration: none;
@@ -51,12 +52,16 @@
   background-position: center;
 
   &--left {
-    left: -15px;
+    left: 5px;
     background-image: url("../../svg/left.svg");
   }
 
   &--right {
-    right: -15px;
+    right: 5px;
     background-image: url("../../svg/right.svg");
   }
+}
+
+.slider__image {
+  /* display: block; */
 }

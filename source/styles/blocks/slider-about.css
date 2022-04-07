@@ -1,10 +1,14 @@
 .slider-about {
+  display: block;
   background-color: var(--background-color);
   border-radius: 5px;
   text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .slider-about__name {
+  display: block;
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;

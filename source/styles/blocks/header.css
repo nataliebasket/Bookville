@@ -3,6 +3,20 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  height: 80px;
+}
+
+.header--decoration {
+  border-bottom: 1px solid var(--header-boottom-line, #cdcdcd);
+}
+
+.header__container {
+  width: 80%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header__logo {

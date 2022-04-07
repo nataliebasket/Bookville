@@ -65,6 +65,18 @@
   line-height: 17px;
 }
 
-/* .book__add-basket {
+.book__add-basket {
+  width: 17px;
+  height: 17px;
+  border: 0;
+  background-image: url("../../svg/basket.svg");
+  background-size: 17px 17px;
+  background-color: transparent;
+}
 
-} */
+.book__cost-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
